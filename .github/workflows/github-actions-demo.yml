@@ -19,7 +19,7 @@ jobs:
     steps:
       - run: |
           echo "Job was triggered by event: ${{ github.event.name }}"
-          echo "Branch name: ${{ github.ref }}
+          echo "Branch name: ${{ github.ref }}"
           
       - uses: actions/checkout@v3.3.0
 
