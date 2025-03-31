@@ -13,4 +13,16 @@ on:
 
   workflow_run:
     
-  
+jobs:
+  Build: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Job was triggered by event: ${{ github.event.name }}"
+          echo "Branch name: ${{ github.ref }}
+      - uses: actions/checkout@v3.3.0
+
+      - name: List files in repo
+      - run: |
+          echo "${{github.repository}} contains:"
+          tree
